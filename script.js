@@ -4,12 +4,12 @@ const add = () => {
   var new_price = parseInt(document.querySelector("#newPrice").value);
   var old_price = parseInt(document.querySelector("#oldPrice").value);
   var product_code = document.querySelector("#product_code").value;
+  var type = document.querySelector("#type").value;
 
   if (!img_link || !product_name || !new_price || !old_price || !product_code) {
     alert("Vui lòng nhập đầy đủ thông tin sản phẩm!");
     return;
   }
-
   console.log(img_link + product_name + product_code + old_price + new_price);
 
   var productInfor = " <div class=" + "card" + " style=" + "width:400px" + ">";
@@ -38,5 +38,14 @@ const add = () => {
     "<a href=" + "#" + " class=" + "btn btn-primary" + ">Đặt Mua</a>";
   productInfor += " </div> " + "</div>";
 
-  document.querySelector(".body_content_session").innerHTML += productInfor;
+  
+  if (type == "nu"){
+    document.querySelector(".body_content_session_girl").innerHTML += productInfor;
+  }
+  else{
+    document.querySelector(".body_content_session_boy").innerHTML += productInfor;
+  }
+
+  
 };
+

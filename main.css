@@ -6,7 +6,7 @@
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 730px;
+    height: 850px;
 }
 
 .header {
@@ -58,11 +58,13 @@ button:hover {
     font-size: 20px;
     margin: 20px 0 40px;
 }
-.body_content_session{
+.body_content_session_girl , .body_content_session_boy{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
+
+
 .btn{
     display: block;
     background-color: red !important;
