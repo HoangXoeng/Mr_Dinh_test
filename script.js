@@ -1,11 +1,4 @@
 const add = () => {
-  var img_link = document.querySelector("#img_link").value;
-  var product_name = document.querySelector("#name").value;
-  var new_price = parseInt(document.querySelector("#newPrice").value);
-  var old_price = parseInt(document.querySelector("#oldPrice").value);
-  var product_code = document.querySelector("#product_code").value;
-  var type = document.querySelector("#type").value;
-
   if (!img_link || !product_name || !new_price || !old_price || !product_code) {
     alert("Vui lòng nhập đầy đủ thông tin sản phẩm!");
     return;
@@ -32,20 +25,24 @@ const add = () => {
     "</h4>";
   productInfor += "<div class=" + "price" + ">";
   productInfor += " <p class=" + "newPrice" + ">" + new_price + "vnđ" + "</p>";
-  productInfor += " <p class=" + "oldPrice" + ">" + old_price + "vnđ"  +"</p>";
+  productInfor += " <p class=" + "oldPrice" + ">" + old_price + "vnđ" + "</p>";
   productInfor += "</div>";
   productInfor +=
     "<a href=" + "#" + " class=" + "btn btn-primary" + ">Đặt Mua</a>";
   productInfor += " </div> " + "</div>";
 
-  
-  if (type == "nu"){
-    document.querySelector(".body_content_session_girl").innerHTML += productInfor;
+  if (type == "nu") {
+    document.querySelector(".body_content_session_girl").innerHTML +=
+      productInfor;
+  } else {
+    document.querySelector(".body_content_session_boy").innerHTML +=
+      productInfor;
   }
-  else{
-    document.querySelector(".body_content_session_boy").innerHTML += productInfor;
-  }
-
-  
 };
 
+var img_link = document.querySelector("#img_link").value;
+var product_name = document.querySelector("#name").value;
+var new_price = parseInt(document.querySelector("#newPrice").value);
+var old_price = parseInt(document.querySelector("#oldPrice").value);
+var product_code = document.querySelector("#product_code").value;
+var type = document.querySelector("#type").value;
